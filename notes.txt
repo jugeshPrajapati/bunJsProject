@@ -1,0 +1,17 @@
+bun js fastest js engine it support typescript by default no configuration require for typescript
+bun init  ///to create new project
+bun add express && bun add -d @types/express    ///add use to install new dependencies, -d use to install package in dev env
+bun remove nodemon      /// remove use to uninstall dependencies
+
+bus does not need Traditional file watchers like nodemon restart the entire process,
+so HTTP servers and other stateful objects are lost. By contrast, 
+bun --hot is able to reflect the updated code without restarting the process. 
+ --smol  use to save memory
+add this line of code in package.json to execute file in dev mode 
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun --hot --smol run  ./src/index.ts"
+  },
+
+  write this code in terminal to start project 
+  bun run dev
