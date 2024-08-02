@@ -2,8 +2,8 @@ import express, { type Request, type Response, type NextFunction, type Express }
 const app: Express = express();
 
 app.use(express.json());
-
-const port = process.env.PORT || 8080;
+//  you won't need dotenv to install in bun js
+const port = Bun.env.PORT || 8081;
 
 app.get(
   '/',

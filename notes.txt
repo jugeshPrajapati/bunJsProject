@@ -15,3 +15,5 @@ add this line of code in package.json to execute file in dev mode
 
   write this code in terminal to start project 
   bun run dev
+  bun add -d prisma //add prisma orm
+  bunx prisma //open prisma help
