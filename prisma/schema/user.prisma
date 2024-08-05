@@ -1,9 +1,11 @@
-model Users{
-  id Int @id @default(autoincrement())
-  name String @db.VarChar(190)
-  email String @unique @db.VarChar(190)
-  passwaord String
-  profile String?
+model Users {
+  id         Int      @id @default(autoincrement())
+  name       String   @db.VarChar(190)
+  email      String   @unique @db.VarChar(190)
+  password   String
+  profile    String?
   created_at DateTime @default(now())
   updated_at DateTime @default(now())
+
+  // @@map("users") it give the name of table otherwise it use model name
 }

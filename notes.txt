@@ -17,3 +17,9 @@ add this line of code in package.json to execute file in dev mode
   bun run dev
   bun add -d prisma //add prisma orm
   bunx prisma //open prisma help
+  bunx prisma migrate dev
+  migration file are the sql file which use to run sql command
+  prisma don't have rename coloumn functionality  
+  so use --create-only to create the migration file, and manually modify it then run prisma migrate dev to apply it and verify it works.
+  
+  >bun add -d @types/model_name 
