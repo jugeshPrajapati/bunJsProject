@@ -23,3 +23,14 @@ add this line of code in package.json to execute file in dev mode
   so use --create-only to create the migration file, and manually modify it then run prisma migrate dev to apply it and verify it works.
   
   >bun add -d @types/model_name 
+
+  To start Redis Stack server using the redis-stack image, run the following command in your terminal:
+
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 -e REDIS_ARGS="--requirepass mypassword" redis/redis-stack:latest
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+see redis on http://localhost:8001/redis-stack/browser
+You can then connect to the server using redis-cli, just as you connect to any Redis instance.
+
+If you don’t have redis-cli installed locally, you can run it from the Docker container:
+
+$ docker exec -it redis-stack redis-cli

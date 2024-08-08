@@ -1,5 +1,5 @@
 import vine from "@vinejs/vine";
-import {JSONAPIErrorReporter} from "./custom_error_reporter"
+import {JSONAPIErrorReporter} from "../utils/custom_error_reporter"
 
 vine.errorReporter =()=> new JSONAPIErrorReporter();
 export const register_validator = vine.object({
